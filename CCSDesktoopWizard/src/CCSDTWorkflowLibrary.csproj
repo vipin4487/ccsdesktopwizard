@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9c6b2318-959f-4123-848f-47cb534d51b8</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>CCSDTWorkflowLibrary</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs" />
+    <Reference Include="WWELib" />
+    <Compile Include="Global.cs" />
+    <Compile Include="SimpleEncryption.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ActivityConditionTypeFilterProvider.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\AuxCodePopWorkflow.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DropDown.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\EmailButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\SWP_Flags.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DialogChangeStatus.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DialogChangeProperties.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ImeNotify.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\FolderViewMode.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DefaultViewType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ButtonStyle.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ZOrderPos.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\StaticControlStyles.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ComboBoxStyles.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WindowStyles.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WindowExStyles.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ChildFromPointFlags.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\HitTest.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\Msg.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\SetWindowPosFlags.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WINDOWINFO.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\POINT.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\RECT.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WINDOWPOS.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\NCCALCSIZE_PARAMS.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\NMHDR.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\OFNOTIFY.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\OpenFileDialogEx.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\AddonWindowLocation.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ControlsID.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ProactiveButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\EmailButtonValidator.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ImageFileEditor.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ProactiveButtonValidator.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ButtonBase.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\Calendar.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ColdConferenceButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ColdTransferButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DecorationType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\AlignmentType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\FontType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ButtonsType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\MinHeightType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ControlBase.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ImageButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\Hyperlink.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\TextArea.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ConditionalDropdownListObj.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\TextBox.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\CriteriaArrayListEditor.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\CriteriaEditorDlg.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\CustomCCSDTWorkflowBase.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\CustomWorkflowDesigner.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DBHelper.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DropdownEditor.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\DropdownListObj.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\GUIElement.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseBranch.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseBranchDesigner.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseBranchValidator.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ConditionalType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\OperatorType.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseCriteria.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseDesigner.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseTest.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseToolboxItem.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\IfElseValidator.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ReadOnlyText.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\OperatorDropdownListObj.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ParameterArrayListEditor.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ParameterEditorDlg.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\RadioButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ScreenPopWorkflow.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\SmartRedirectWorkflow.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\StandardDialButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\HiddenTextBox.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ValidateButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ValidateButtonValidator.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ValidateInputParameter.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\ValidateOutputParameter.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WarmConferenceButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\WarmTransferButton.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\Properties\Settings.cs" />
+    <Compile Include="CCSDTWorkflowLibrary\Properties\Resources.cs" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.OpenFileDialogEx.resources" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.CriteriaEditorDlg.resources" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.ParameterEditorDlg.resources" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Properties.Resources.resources" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.ButtonBase.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.ButtonWithPencil.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.Calendar.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.CheckBox.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.ColoredButton.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.DropDown.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.GroupBox.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.HiddenTextBox.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.HyperLink.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.Image.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.PasswordTextBox.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.RadioButton.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.StaticText.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.TextArea.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.TextBox.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.StopLightYellowNone.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.StopLightYellowRed.png" />
+    <EmbeddedResource Include="CCSDTWorkflowLibrary.Images.StopLightYellowRedAmberGreen.png" />
+  </ItemGroup>
+</Project>
