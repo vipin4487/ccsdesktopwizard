@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>59ea30bf-299a-4bbf-9bd0-afb674812770</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>AxInterop.SHDocVw</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Interop.SHDocVw" />
+    <Reference Include="System" />
+    <Compile Include="Global.cs" />
+    <Compile Include="AxSHDocVw\AxWebBrowser.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NewWindow3EventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NewWindow3Event.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrivacyImpactedStateChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrivacyImpactedStateChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_UpdatePageStatusEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_UpdatePageStatusEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrintTemplateTeardownEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrintTemplateTeardownEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrintTemplateInstantiationEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PrintTemplateInstantiationEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NavigateErrorEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NavigateErrorEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_FileDownloadEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_FileDownloadEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_SetSecureLockIconEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_SetSecureLockIconEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_ClientToHostWindowEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_ClientToHostWindowEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowClosingEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowClosingEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetHeightEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetHeightEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetWidthEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetWidthEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetTopEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetTopEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetLeftEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetLeftEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetResizableEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_WindowSetResizableEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnTheaterModeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnTheaterModeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnFullScreenEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnFullScreenEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnStatusBarEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnStatusBarEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnMenuBarEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnMenuBarEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnToolBarEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnToolBarEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnVisibleEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_OnVisibleEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_DocumentCompleteEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_DocumentCompleteEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NavigateComplete2EventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NavigateComplete2Event.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NewWindow2EventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_NewWindow2Event.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_BeforeNavigate2EventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_BeforeNavigate2Event.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PropertyChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_PropertyChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_TitleChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_TitleChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_CommandStateChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_CommandStateChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_ProgressChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_ProgressChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_StatusTextChangeEventHandler.cs" />
+    <Compile Include="AxSHDocVw\DWebBrowserEvents2_StatusTextChangeEvent.cs" />
+    <Compile Include="AxSHDocVw\AxWebBrowserEventMulticaster.cs" />
+  </ItemGroup>
+</Project>

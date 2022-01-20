@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e65c6acb-4da8-4ac6-a83d-f97aeae18f1b</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>WWELib</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Genesyslab.Platform.Commons" />
+    <Reference Include="Genesyslab.Platform.Configuration.Protocols" />
+    <Reference Include="Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel" />
+    <Reference Include="Genesyslab.Platform.Commons.Protocols" />
+    <Reference Include="Genesyslab.Platform.Commons.Connection" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Genesyslab.Platform.Commons.Collections" />
+    <Compile Include="Global.cs" />
+    <Compile Include="WWELib\CallVariablesGridView.cs" />
+    <Compile Include="WWELib\ComModelBase.cs" />
+    <Compile Include="WWELib\ComModelEventCodes.cs" />
+    <Compile Include="WWELib\ClientChannelHelper.cs" />
+    <Compile Include="WWELib\ComModelCrud.cs" />
+    <Compile Include="WWELib\GetScreepopdataDataContext.cs" />
+    <Compile Include="WWELib\BUSINESS_UNIT_DISPLAY.cs" />
+    <Compile Include="WWELib\CALL_VARIABLE.cs" />
+    <Compile Include="WWELib\usp_update_screenpop_htmlxomlResult.cs" />
+    <Compile Include="WWELib\usp_insert_callvariable_DetailsResult.cs" />
+    <Compile Include="WWELib\ProcessGreeting_Text.cs" />
+    <Compile Include="WWELib\LogWriter.cs" />
+    <Compile Include="WWELib\ScreenPopDBConnection.cs" />
+    <Compile Include="WWELib\Properties\Settings.cs" />
+  </ItemGroup>
+</Project>
