@@ -5,7 +5,7 @@
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b10d49f0-b906-4018-9186-e15bf9771cbd</ProjectGuid>
+    <ProjectGuid>9759b224-741a-4e14-805f-3b47dcf60c14</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>WWELib</AssemblyName>
     <OutputType>Library</OutputType>

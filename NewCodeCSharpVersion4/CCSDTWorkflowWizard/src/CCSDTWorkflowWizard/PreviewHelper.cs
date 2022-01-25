@@ -45,8 +45,8 @@
             try
             {
                 ProcessGreeting_Text text = new ProcessGreeting_Text();
-                Dictionary<string, string> dictionary = null;
-                string htmlText = text.ProcessGreetingText(dictionary, this.currentWorkflow.get_GetHtml());
+                Dictionary<string, string> omniKvps = null;
+                string htmlText = text.ProcessGreetingText(omniKvps, this.currentWorkflow.GetHtml);
                 this.LoadBrowserControl(browserCtrl, htmlText);
                 browserCtrl.SuspendLayout();
                 IHTMLDocument2 document = (IHTMLDocument2) browserCtrl.get_Document();

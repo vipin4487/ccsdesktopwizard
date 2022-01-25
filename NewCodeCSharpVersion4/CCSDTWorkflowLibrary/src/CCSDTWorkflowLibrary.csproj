@@ -5,7 +5,7 @@
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>76b914fa-542d-4e82-8dfb-6d3795136cb0</ProjectGuid>
+    <ProjectGuid>d91b28fb-7fa5-436b-9904-d7621ace4daf</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>CCSDTWorkflowLibrary</AssemblyName>
     <OutputType>Library</OutputType>

@@ -5,7 +5,7 @@
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ba0ac806-dca9-4455-acc0-45cee533d0bb</ProjectGuid>
+    <ProjectGuid>c31416ff-e8fb-40a1-a087-0593ad8cfe1c</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>CCSDTWorkflowWizard</AssemblyName>
     <OutputType>WinExe</OutputType>

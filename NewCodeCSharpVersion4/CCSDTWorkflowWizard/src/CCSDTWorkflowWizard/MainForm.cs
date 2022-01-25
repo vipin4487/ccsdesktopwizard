@@ -125,8 +125,8 @@
         {
             try
             {
-                IComponentChangeService service = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
-                if ((service != null) && (e.Component is Activity))
+                IComponentChangeService ccs = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
+                if ((ccs != null) && (e.Component is Activity))
                 {
                     IDesignerHost host = (IDesignerHost) this.GetService(typeof(IDesignerHost));
                     if ((host != null) && (host.RootComponent > null))
@@ -134,7 +134,7 @@
                         CustomCCSDTWorkflowBase rootComponent = host.RootComponent as CustomCCSDTWorkflowBase;
                         if (rootComponent > null)
                         {
-                            rootComponent.ControlPropertyChanged(service, (Activity) e.Component, e.Member, e.OldValue, e.NewValue);
+                            rootComponent.ControlPropertyChanged(ccs, (Activity) e.Component, e.Member, e.OldValue, e.NewValue);
                         }
                     }
                 }
@@ -149,8 +149,8 @@
         {
             try
             {
-                IComponentChangeService service = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
-                if ((service != null) && (e.Component is Activity))
+                IComponentChangeService ccs = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
+                if ((ccs != null) && (e.Component is Activity))
                 {
                     IDesignerHost host = (IDesignerHost) this.GetService(typeof(IDesignerHost));
                     if ((host != null) && (host.RootComponent > null))
@@ -158,7 +158,7 @@
                         CustomCCSDTWorkflowBase rootComponent = host.RootComponent as CustomCCSDTWorkflowBase;
                         if (rootComponent > null)
                         {
-                            rootComponent.ControlRemoved(service, (Activity) e.Component);
+                            rootComponent.ControlRemoved(ccs, (Activity) e.Component);
                         }
                     }
                 }
@@ -173,8 +173,8 @@
         {
             try
             {
-                IComponentChangeService service = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
-                if ((service != null) && (e.Component is Activity))
+                IComponentChangeService ccs = (IComponentChangeService) this.GetService(typeof(IComponentChangeService));
+                if ((ccs != null) && (e.Component is Activity))
                 {
                     IDesignerHost host = (IDesignerHost) this.GetService(typeof(IDesignerHost));
                     if ((host != null) && (host.RootComponent > null))
@@ -182,7 +182,7 @@
                         CustomCCSDTWorkflowBase rootComponent = host.RootComponent as CustomCCSDTWorkflowBase;
                         if (rootComponent > null)
                         {
-                            rootComponent.ControlNameChanged(service, (Activity) e.Component, e.OldName, e.NewName);
+                            rootComponent.ControlNameChanged(ccs, (Activity) e.Component, e.OldName, e.NewName);
                         }
                     }
                 }
@@ -442,7 +442,7 @@
                 this.splitToolboxAndProperties.Panel2.SuspendLayout();
                 this.splitToolboxAndProperties.SuspendLayout();
                 this.pnlCallVar.SuspendLayout();
-                this.dgCurrentCallVariables.BeginInit();
+                ((ISupportInitialize) this.dgCurrentCallVariables).BeginInit();
                 base.SuspendLayout();
                 AppLogger.AddMsg("************* After Suspend Layout.", AppLogger.LoggingLevelTypes.NormalDebug);
                 this.splitWorkspace.Dock = DockStyle.Fill;
@@ -721,7 +721,7 @@
                 this.splitToolboxAndProperties.Panel2.ResumeLayout(false);
                 this.splitToolboxAndProperties.ResumeLayout(false);
                 this.pnlCallVar.ResumeLayout(false);
-                this.dgCurrentCallVariables.EndInit();
+                ((ISupportInitialize) this.dgCurrentCallVariables).EndInit();
                 base.ResumeLayout(false);
                 AppLogger.AddMsg("************* InitiationCompleted Called.", AppLogger.LoggingLevelTypes.NormalDebug);
             }
@@ -817,9 +817,9 @@
                     if (screenPopDefinition > null)
                     {
                         AppLogger.AddMsg("************* Before Xoml is assigned.", AppLogger.LoggingLevelTypes.NormalDebug);
-                        this.Xoml = screenPopDefinition.get_screenpop_script_xoml();
+                        this.Xoml = screenPopDefinition.screenpop_script_xoml;
                         AppLogger.AddMsg("************* Afterxoml is assigned." + this.Xoml, AppLogger.LoggingLevelTypes.NormalDebug);
-                        this.Text = this.Text + " - " + screenPopDefinition.get_display_tag();
+                        this.Text = this.Text + " - " + screenPopDefinition.display_tag;
                     }
                     break;
                 }
@@ -1277,9 +1277,9 @@
                 CustomCCSDTWorkflowBase rootComponent = service.RootComponent as CustomCCSDTWorkflowBase;
                 if (rootComponent > null)
                 {
-                    string text = rootComponent.get_GetHtml();
-                    MessageBox.Show(text);
-                    Clipboard.SetData(DataFormats.Text, text);
+                    string getHtml = rootComponent.GetHtml;
+                    MessageBox.Show(getHtml);
+                    Clipboard.SetData(DataFormats.Text, getHtml);
                 }
             }
         }
@@ -1351,8 +1351,8 @@
                     CustomCCSDTWorkflowBase rootComponent = service.RootComponent as CustomCCSDTWorkflowBase;
                     if (rootComponent > null)
                     {
-                        string str = rootComponent.get_GetHtml();
-                        new ScreenPopDBConnection().UpdateScreenPop(this.business_unit_display_id, str, this.GetCurrentXoml());
+                        string getHtml = rootComponent.GetHtml;
+                        new ScreenPopDBConnection().UpdateScreenPop(this.business_unit_display_id, getHtml, this.GetCurrentXoml());
                     }
                 }
                 MessageBox.Show("Workflow saved.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
